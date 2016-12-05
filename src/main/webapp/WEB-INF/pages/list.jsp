@@ -14,7 +14,7 @@ List
     <Book>)request.getAttribute("book");
         %>
         <div>
-            Welcome,<span>demo</span>
+            Welcome,<span><%= session.getAttribute("userName")%></span>
             <a href="#">Logout</a>
         </div>
         <br/>
