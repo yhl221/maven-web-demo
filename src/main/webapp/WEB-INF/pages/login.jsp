@@ -19,7 +19,7 @@
         </div>
         <div>
             <label >Password</label>
-            <input type="text" name="passWord">
+            <input type="password" name="passWord">
         </div>
         <button type="submit">Login</button>
     </form>
