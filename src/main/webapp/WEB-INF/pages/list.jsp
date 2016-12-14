@@ -15,7 +15,10 @@ List
         %>
         <div>
             Welcome,<span><%= session.getAttribute("userName")%></span>
-            <a href="#">Logout</a>
+            <form action="Logout" method="post">
+                <button type="submit">Logout</button>
+            </form>
+
         </div>
         <br/>
         <div>

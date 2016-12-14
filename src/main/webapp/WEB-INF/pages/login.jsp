@@ -6,7 +6,7 @@
 </head>
 <body>
 <div>
-    <%= request.getAttribute("message")%>
+    <%= request.getAttribute("message")==null? "please Login" : request.getAttribute("message")%>
 </div>
 <div>
     <span>

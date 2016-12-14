@@ -13,15 +13,15 @@ public class LoginServlet  extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String userName=req.getParameter("userName");
         String passWord=req.getParameter("passWord");
-        System.out.println(userName+passWord);
-        if(userName==null|| passWord==null){
+        if(userName.equals("")|| passWord.equals("")){
+
             req.setAttribute("message","Please Login");
-            req.getRequestDispatcher("/WEB-INF/pages/login.jsp").forward(req,resp);
+            resp.sendRedirect("/login.jsp");
         }else if(userName.equals("liuru") && passWord.equals("111111")){
             req.getSession().setAttribute("userName",userName);
             resp.sendRedirect("/");
-           // req.getRequestDispatcher("/WEB-INF/pages/list.jsp").forward(req,resp);
         }else{
+            System.out.println("this is null");
             req.setAttribute("message","Invalid userName or passWord");
             req.getRequestDispatcher("/WEB-INF/pages/login.jsp").forward(req,resp);
         }
